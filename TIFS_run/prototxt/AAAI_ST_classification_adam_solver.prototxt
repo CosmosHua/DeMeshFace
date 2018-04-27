@@ -1,0 +1,21 @@
+net: "./AAAI_ST_classification_adam_train.prototxt"
+#net: "/home/shu.zhang/code/ICB_EXT/SegNet/FaceInpainting/prototxt/Tanh_segnet_classification_adam_train.prototxt"
+
+test_iter: 10000
+test_interval: 5000
+base_lr: 0.0001
+lr_policy: "step"
+gamma: 0.1
+type: "Adam"
+stepsize: 80000
+display: 100
+momentum: 0.9
+momentum2: 0.999
+delta: 0.00000001
+max_iter: 320000
+weight_decay: 0.0005
+snapshot: 10000
+#snapshot_prefix:"/home/shu.zhang/code/ICB_EXT/SegNet/FaceInpainting/model/Tanh_adam_classfication_1e-4_multifeature_soft_withVGG"
+snapshot_prefix:"../model/AAAI_ST_weighted_pixel_conv2_fc_Bloss_8_32"
+
+solver_mode: GPU
